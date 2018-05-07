@@ -1,0 +1,5 @@
+CREATE TABLE [dbo].[Products] (
+    [Id] INT NOT NULL,
+    [ProductName] NVARCHAR (50) NOT NULL,
+    CONSTRAINT [PK_Teams] PRIMARY KEY CLUSTERED ([Id] ASC)
+);
