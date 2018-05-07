@@ -1,0 +1,7 @@
+CREATE TABLE [dbo].[CategoryProducts] (
+    [CategoryId] INT NOT NULL,
+    [ProductId] INT NOT NULL,
+    CONSTRAINT [PK_CategoryProducts] PRIMARY KEY CLUSTERED ([CategoryId] ASC, [ProductId] ASC),
+    CONSTRAINT [FK_CategoryProducts_Categories] FOREIGN KEY ([CategoryId]) REFERENCES [dbo].[Categories] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_CategoryProducts_Products] FOREIGN KEY ([ProductId]) REFERENCES [dbo].[Products] ([Id]) ON DELETE CASCADE
+);
